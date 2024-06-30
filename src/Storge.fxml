@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="551.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Storge">
+   <children>
+      <AnchorPane layoutX="3.0" layoutY="-2.0" prefHeight="556.0" prefWidth="784.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="95.0" layoutY="29.0" prefHeight="27.0" prefWidth="82.0" text="Storge" textFill="#d76615">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="88.0" fitWidth="104.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../FB_IMG_1688152134666.jpg" />
+               </image>
+            </ImageView>
+            <Line endX="652.2000732421875" endY="-6.799999237060547" fill="#b55e0e" layoutX="108.0" layoutY="69.0" startX="-98.20000457763672" startY="-6.799999237060547" stroke="#c1630b" strokeWidth="3.0" />
+            <TableView fx:id="StorgeTable" layoutX="22.0" layoutY="118.0" prefHeight="275.0" prefWidth="719.0">
+              <columns>
+                <TableColumn fx:id="CategoriesId" prefWidth="358.3999881744385" text="Categories Id" />
+                  <TableColumn fx:id="CategoriesName" prefWidth="360.8000183105469" text="Categories Name" />
+              </columns>
+            </TableView>
+            <Button fx:id="showStack" layoutX="65.0" layoutY="453.0" mnemonicParsing="false" onAction="#showStackAction" prefHeight="26.0" prefWidth="112.0" text="show Stock" />
+            <Button fx:id="showSold" layoutX="229.0" layoutY="453.0" mnemonicParsing="false" onAction="#ShoeSoldAction" prefHeight="26.0" prefWidth="112.0" text="Show Sold" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

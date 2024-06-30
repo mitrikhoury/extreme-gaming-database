@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="736.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BatchStock">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9f03" height="62.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="736.0" />
+      <ImageView fitHeight="62.0" fitWidth="150.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../FB_IMG_1688152134666.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="252.0" layoutY="29.0" text="Batch For" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelProduct" layoutX="351.0" layoutY="29.0" prefHeight="32.0" prefWidth="142.0" textFill="#fffefe">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="427.0" prefHeight="27.0" prefWidth="131.0" text="Total Quantity : " textFill="#ff9f03">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="batcTable" layoutX="14.0" layoutY="130.0" prefHeight="248.0" prefWidth="678.0">
+        <columns>
+            <TableColumn fx:id="ProductName" prefWidth="103.20001220703125" text="Product Name" />
+            <TableColumn fx:id="productId" prefWidth="94.39990234375" text="Product Id" />
+          <TableColumn fx:id="productionDate" prefWidth="102.39996719360352" text="production Date" />
+          <TableColumn fx:id="ExpiryDate" minWidth="0.0" prefWidth="136.80003356933594" text="Expiry Date" />
+            <TableColumn fx:id="Amount" minWidth="0.0" prefWidth="145.5999755859375" text="Amount" />
+            <TableColumn fx:id="Price" prefWidth="93.60001220703123" text="Price" />
+        </columns>
+      </TableView>
+      <Line endX="-37.999977111816406" endY="7.62939453125E-6" layoutX="126.0" layoutY="76.0" startX="-100.0" />
+      <Line endX="-68.9999771118164" endY="22.599998474121094" layoutX="157.0" layoutY="15.0" startX="-131.0" startY="-0.9999942779541016" stroke="#ff9f03" />
+      <Line endX="-64.9999771118164" endY="11.399999618530273" layoutX="153.0" layoutY="15.0" startX="-100.0" stroke="#ff9f03" />
+      <Line endX="-53.999969482421875" endY="-19.399993896484375" layoutX="141.0" layoutY="85.0" startX="-84.00000762939453" startY="-8.999992370605469" stroke="#ff9f03" />
+      <Line endX="-51.999977111816406" endY="-9.200004577636719" layoutX="140.0" layoutY="62.0" startX="-114.00000762939453" startY="14.000007629394531" stroke="#ff9f03" />
+      <Line endX="-50.999977111816406" endY="5.7220458984375E-6" layoutX="139.0" layoutY="14.0" startX="-113.70709991455078" startY="5.7220458984375E-6" />
+      <Line endX="64.90706634521484" endY="-36.492897033691406" layoutX="39.0" layoutY="82.0" startX="49.707115173339844" startY="-29.90711212158203" />
+      <Line endX="60.199974060058594" endY="-22.20000457763672" layoutX="43.0" layoutY="67.0" startX="45.707115173339844" startY="-28.692893981933594" />
+      <Line endX="84.39999389648438" endY="-15.799995422363281" layoutX="50.0" layoutY="59.0" startX="40.399986267089844" startY="-31.799997329711914" />
+      <Line endX="95.00003051757812" endY="-55.99999237060547" layoutX="41.0" layoutY="100.0" startX="47.800010681152344" startY="-35.99999237060547" />
+      <Label fx:id="labelCount" layoutX="171.0" layoutY="427.0" prefHeight="18.0" prefWidth="76.0" textFill="#ff9f03">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="add" fitHeight="49.0" fitWidth="31.0" layoutX="693.0" layoutY="130.0" onMouseClicked="#avtionAdd" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../add.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="editPen" fitHeight="32.0" fitWidth="150.0" layoutX="693.0" layoutY="161.0" onMouseClicked="#actionEdit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Pensel.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

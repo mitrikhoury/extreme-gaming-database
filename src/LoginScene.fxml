@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="599.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <AnchorPane prefHeight="599.0" prefWidth="690.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <PasswordField fx:id="passwd" layoutX="397.0" layoutY="313.0" prefHeight="38.0" prefWidth="218.0" promptText="Password" />
+            <ImageView fitHeight="601.0" fitWidth="258.0" layoutY="-1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../FB_IMG_1688152134666.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="331.0" layoutY="61.0" prefHeight="46.0" prefWidth="218.0" text="Log In">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Line endX="316.20001220703125" endY="-1.52587890625E-5" layoutX="367.0" layoutY="155.0" startX="-100.0" strokeWidth="5.0" />
+            <Label layoutX="296.0" layoutY="224.0" prefHeight="50.0" prefWidth="34.0" text="ID">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id" layoutX="397.0" layoutY="230.0" prefHeight="38.0" prefWidth="218.0" promptText="ID" />
+            <Label layoutX="271.0" layoutY="305.0" prefHeight="50.0" prefWidth="114.0" text="Password">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="login" layoutX="385.0" layoutY="410.0" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="106.0" style="-fx-background-radius: 100;" text="Log In" />
+            <Button fx:id="singup" layoutX="385.0" layoutY="474.0" mnemonicParsing="false" onAction="#loadSignUp" prefHeight="38.0" prefWidth="106.0" style="-fx-background-radius: 100;" text="Sign Up" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

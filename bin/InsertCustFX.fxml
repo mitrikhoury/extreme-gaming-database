@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InsertCustomerController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <top>
+      <VBox prefHeight="198.0" prefWidth="580.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#7582fc" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Selected Row" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman Bold" size="21.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tableViewCust" onMouseClicked="#rowViewCust" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+               <columns>
+                  <TableColumn fx:id="idCol" minWidth="30.0" prefWidth="56.799986243247986" text="ID" />
+                  <TableColumn fx:id="namecol" prefWidth="86.39997100830078" text="Name" />
+                  <TableColumn fx:id="lastPaymetDateCol" prefWidth="78.4000244140625" text="last payment" />
+                  <TableColumn fx:id="lastOrderDateCol" prefWidth="73.60003662109375" text="Last Order" />
+                  <TableColumn fx:id="phoneCol" prefWidth="63.20001220703125" text="Phone" />
+                  <TableColumn fx:id="EmailCol" prefWidth="157.60000610351562" text="Email" />
+                  <TableColumn fx:id="depCol" prefWidth="60.79998779296875" text="Debt" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="190.0" prefWidth="580.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="16.0" prefWidth="580.0" spacing="15.0">
+               <children>
+                  <Text fill="#7582fc" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Employee" wrappingWidth="133.72699737548828">
+                     <font>
+                        <Font name="Times New Roman Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="addimage" fitHeight="25.0" fitWidth="43.0" onMouseClicked="#addEmployee" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../add.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="deleteImage" fitHeight="25.0" fitWidth="26.0" onMouseClicked="#deleteRow" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../delete.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="158.0" prefWidth="580.0">
+               <children>
+                  <VBox prefHeight="154.0" prefWidth="439.0">
+                     <children>
+                        <GridPane hgap="15.0" prefHeight="155.0" prefWidth="269.0" vgap="15.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="10.0" />
+                           </padding>
+                           <children>
+                              <Label text="Name:" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font></Label>
+                              <Label text="Last Order :" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font></Label>
+                              <TextField fx:id="nameTf" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="lastPayment :" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="lastPaymentDAteTf" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <DatePicker fx:id="lastOrderdateTF" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="nameTF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Customer ID :" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="custID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="154.0" prefWidth="482.0">
+                     <children>
+                        <GridPane hgap="15.0" prefHeight="154.0" prefWidth="312.0" vgap="15.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="33.599998092651376" minHeight="27.20000610351563" prefHeight="30.0" />
+                            <RowConstraints maxHeight="33.599998092651376" minHeight="27.20000610351563" prefHeight="27.20000610351563" />
+                              <RowConstraints maxHeight="64.400048828125" minHeight="10.0" prefHeight="63.599999999999994" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <Label text="Debt :" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font></Label>
+                              <Label text="Email :" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font></Label>
+                              <TextArea fx:id="Email_contantTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="debtTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Phone :">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="14.0" />
+                                 </font></Label>
+                              <TextField fx:id="phoneTF" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

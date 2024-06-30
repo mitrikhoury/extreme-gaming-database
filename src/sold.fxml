@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="470.0" prefWidth="819.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="soldes">
+   <children>
+      <AnchorPane layoutX="-186.0" layoutY="-100.0" prefHeight="200.0" prefWidth="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9f03" height="54.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="798.0" />
+      <ImageView fitHeight="76.0" fitWidth="150.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../FB_IMG_1688152134666.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="soldTable" layoutX="10.0" layoutY="100.0" prefHeight="306.0" prefWidth="754.0">
+        <columns>
+            <TableColumn fx:id="productName" prefWidth="102.39999103546143" text="productName" />
+          <TableColumn fx:id="ExpiredDate" prefWidth="108.0" text="expired Date" />
+            <TableColumn fx:id="SaleDate" prefWidth="74.40003967285156" text="Sale Date" />
+            <TableColumn fx:id="Amount" prefWidth="105.60003662109375" text="Amount" />
+            <TableColumn fx:id="SoldBy" prefWidth="104.0" text="Sold By" />
+            <TableColumn fx:id="BougthBy" prefWidth="99.99993896484375" text="Bought By " />
+          <TableColumn fx:id="manufactirangDate" prefWidth="161.5999755859375" text="manufacturing Date" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelCategores" layoutX="287.0" layoutY="34.0" prefHeight="27.0" prefWidth="166.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

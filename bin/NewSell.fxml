@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="671.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerNewSell">
+   <children>
+      <AnchorPane layoutX="-266.0" layoutY="-174.0" prefHeight="671.0" prefWidth="859.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="29.0" layoutY="24.0" prefHeight="26.0" prefWidth="78.0" text="Product" />
+            <Button fx:id="addProduct" layoutX="103.0" layoutY="25.0" mnemonicParsing="false" onAction="#addProductScene" prefHeight="26.0" prefWidth="92.0" style="-fx-background-radius: 100; -fx-border-width: 100; -fx-border-radius: 100;" text="Add product" />
+            <Line endX="724.199951171875" endY="-3.0517578125E-5" layoutX="115.0" layoutY="419.0" startX="-100.0" strokeWidth="5.0" />
+            <Label layoutX="24.0" layoutY="435.0" prefHeight="26.0" prefWidth="78.0" text="Customer" />
+            <Button fx:id="chooseCustomer" layoutX="103.0" layoutY="435.0" mnemonicParsing="false" onAction="#chooseCustomerScene" prefHeight="26.0" prefWidth="119.0" style="-fx-background-radius: 100; -fx-border-width: 100; -fx-border-radius: 100;" text="Choose customer" />
+            <Line endX="728.199951171875" endY="-3.0517578125E-5" layoutX="115.0" layoutY="485.0" startX="-100.0" strokeWidth="5.0" />
+            <Label layoutX="15.0" layoutY="503.0" prefHeight="26.0" prefWidth="45.0" text="Date" />
+            <Label fx:id="date" layoutX="63.0" layoutY="507.0" prefHeight="18.0" prefWidth="92.0" />
+            <Label layoutX="14.0" layoutY="542.0" prefHeight="26.0" prefWidth="60.0" text="Total cost" />
+            <Label fx:id="TotCost" layoutX="75.0" layoutY="546.0" prefHeight="18.0" prefWidth="85.0" />
+            <Label layoutX="9.0" layoutY="589.0" prefHeight="26.0" prefWidth="60.0" text="Discount" />
+            <TextField fx:id="discount" layoutX="75.0" layoutY="590.0" onKeyReleased="#calculateDiscount" prefHeight="26.0" prefWidth="60.0" />
+            <Label layoutX="201.0" layoutY="537.0" prefHeight="26.0" prefWidth="72.0" text="Paid Amount" />
+            <TextField fx:id="paid" layoutX="288.0" layoutY="539.0" prefHeight="26.0" prefWidth="72.0" />
+            <TableView fx:id="productsOrdered" layoutX="11.0" layoutY="70.0" prefHeight="316.0" prefWidth="834.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="name" />
+                <TableColumn fx:id="BarcodeColumn" prefWidth="75.0" text="Barcode" />
+                  <TableColumn fx:id="priceColuumn" prefWidth="75.0" text="price" />
+                  <TableColumn fx:id="amountColumn" prefWidth="83.20002746582031" text="amount" />
+                  <TableColumn fx:id="expiredDateColumn" prefWidth="126.4000244140625" text="expiredDate" />
+                  <TableColumn fx:id="manufacturingDateColumn" prefWidth="199.19992065429688" text="manufacturingDate" />
+                  <TableColumn fx:id="IdCategoriesColumn" prefWidth="196.00006103515625" text="IdCategories" />
+              </columns>
+            </TableView>
+            <Label layoutX="203.0" layoutY="498.0" prefHeight="26.0" prefWidth="107.0" text="cost after discount" />
+            <Label fx:id="costAD" layoutX="322.0" layoutY="501.0" prefHeight="18.0" prefWidth="92.0" />
+            <Button fx:id="sell" layoutX="17.0" layoutY="630.0" mnemonicParsing="false" onAction="#sellTo" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 100; -fx-border-width: 100; -fx-border-radius: 100;" text="sell" />
+            <Label layoutX="200.0" layoutY="589.0" prefHeight="26.0" prefWidth="72.0" text="warehouse" />
+            <TextField fx:id="warehouse" layoutX="288.0" layoutY="590.0" prefHeight="26.0" prefWidth="72.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

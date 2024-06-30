@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="689.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <BorderPane fx:id="BPane" prefHeight="689.6" prefWidth="804.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <Pane fx:id="dashBPane" prefHeight="690.0" prefWidth="696.0" style="-fx-background-color: #AFAFAF;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="outOfStock" layoutX="545.0" layoutY="465.0" prefHeight="200.0" prefWidth="107.0" style="-fx-background-color: #d8d8d8;">
+                    <columns>
+                      <TableColumn fx:id="pname" prefWidth="106.199951171875" text="product name" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="outOfStockSoon" layoutX="30.0" layoutY="222.0" prefHeight="200.0" prefWidth="605.0" style="-fx-background-color: #d8d8d8;">
+                    <columns>
+                      <TableColumn fx:id="PnameS" prefWidth="75.0" text="Pname" />
+                      <TableColumn fx:id="Barcode" prefWidth="75.0" text="Barcode" />
+                        <TableColumn fx:id="pprice" prefWidth="75.0" text="pprice" />
+                        <TableColumn fx:id="weight" prefWidth="75.0" text="Amount" />
+                        <TableColumn fx:id="expiredDate" prefWidth="108.0" text="expiredDate" />
+                        <TableColumn fx:id="manufacturingDate" prefWidth="118.39990234375" text="manufacturingDate" />
+                        <TableColumn fx:id="IdCategories" minWidth="1.5999755859375" prefWidth="75.2000732421875" text="IdCategories" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="213.0" layoutY="190.0" prefHeight="32.0" prefWidth="200.0" text="Out of Stock Soon" />
+                  <Label alignment="CENTER" layoutX="496.0" layoutY="430.0" prefHeight="32.0" prefWidth="200.0" text="Out Of Stock " />
+                  <TableView fx:id="Report" layoutX="43.0" layoutY="14.0" prefHeight="200.0" prefWidth="176.0" style="-fx-background-color: #d8d8d8;">
+                    <columns>
+                      <TableColumn fx:id="ReportColumn" prefWidth="106.39996337890625" text="Report" />
+                      <TableColumn fx:id="AmountColumn" prefWidth="68.80001831054688" text="Amount" />
+                    </columns>
+                  </TableView>
+                  <LineChart fx:id="salesLineChart" layoutY="450.0" prefHeight="241.0" prefWidth="538.0" title="Sales">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xaxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <ChoiceBox fx:id="mothChoice" layoutX="43.0" layoutY="450.0" prefHeight="25.0" prefWidth="68.0" />
+                  <ChoiceBox fx:id="yearChoice" layoutX="131.0" layoutY="449.0" prefHeight="25.0" prefWidth="74.0" />
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <VBox prefHeight="689.0" prefWidth="107.0" style="-fx-background-color: #665c51;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="dashboard" mnemonicParsing="false" onAction="#loadDashboard" prefHeight="74.0" prefWidth="107.0" style="-fx-background-color: #665c51;" text="dashboard" textFill="#eab54d" />
+                  <Button fx:id="newSell" mnemonicParsing="false" onAction="#loadNewSell" prefHeight="68.0" prefWidth="111.0" style="-fx-background-color: #665c51;" text="New Sell" textFill="#eab54d" />
+                  <Button fx:id="payingOff" mnemonicParsing="false" onAction="#loadPayingOf" prefHeight="68.0" prefWidth="111.0" style="-fx-background-color: #665c51;" text="Paying off" textFill="#eab54d" />
+                  <Button fx:id="dispose" mnemonicParsing="false" onAction="#loadDispose" prefHeight="68.0" prefWidth="111.0" style="-fx-background-color: #665c51;" text="Dispose" textFill="#eab54d" />
+                  <Button fx:id="Storge" mnemonicParsing="false" onAction="#loadStorge" prefHeight="68.0" prefWidth="111.0" style="-fx-background-color: #665c51;" text="Storge" textFill="#eab54d" />
+                  <Button fx:id="Employee" mnemonicParsing="false" onAction="#loadEmployee" prefHeight="68.0" prefWidth="111.0" style="-fx-background-color: #665c51;" text="Employee" textFill="#eab54d" />
+                  <Button fx:id="Customer" mnemonicParsing="false" onAction="#loadCustomer" prefHeight="68.0" prefWidth="111.0" style="-fx-background-color: #665c51;" text="Customer" textFill="#eab54d" />
+                  <Button mnemonicParsing="false" onAction="#loadCustomer" prefHeight="68.0" prefWidth="111.0" style="-fx-background-color: #665c51;" text="Report" textFill="#eab54d" />
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
